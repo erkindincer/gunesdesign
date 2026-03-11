@@ -79,7 +79,7 @@ export const designs: Design[] = [
 {
   slug: "robot_projectt",
   title: "Telepresence Robot",
-  cover: "/designs/robot_projectt/cover.jpg",
+  cover: "/designs/robot_projectt/cover.png",
   gallery: [
     { src: "/designs/robot_projectt/11.png", caption: "Figure 01" },
     { src: "/designs/robot_projectt/12.png", caption: "Figure 02" },
