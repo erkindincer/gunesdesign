@@ -99,7 +99,7 @@ export const designs: Design[] = [
     { src: "/designs/robot_projectt/07.jpg", caption: "Figure 16" }, 
     { src: "/designs/robot_projectt/08.jpg", caption: "Figure 17" },
     { src: "/designs/robot_projectt/09.jpg", caption: "Figure 18" },
-    { src: "/designs/robot_projectt/cover.jpg", caption: "Figure 19" },  
+    { src: "/designs/robot_projectt/cover.png", caption: "Figure 19" },  
   ],
 
   category: "Robotic",
