@@ -139,4 +139,26 @@ export const designs: Design[] = [
     specs: [
     ],
   },
+  {
+  slug: "shop_project",
+  title: "Shop Shelves Project",
+  cover: "/designs/shop_project/cover.png",
+  gallery: [
+    { src: "/designs/shop_project/cover.png", caption: "Figure 01" },
+    { src: "/designs/shop_project/01.png", caption: "Figure 02" },
+    { src: "/designs/shop_project/02.png", caption: "Figure 03" },
+    { src: "/designs/shop_project/03.png", caption: "Figure 04" },  
+    { src: "/designs/shop_project/04.png", caption: "Figure 05" },
+    { src: "/designs/shop_project/05.png", caption: "Figure 06" },
+  ],
+
+  category: "",
+  year: "2026",
+  subtitle: "Carpenter Collobrated Shelves Design",
+  specs: [
+    { label: "Scope", value: "Design document made to show customer needs to carpenter." },
+    { label: "Focus", value: "Perferct size customer friendly shelf for dry stock." },
+    { label: "Deliverables", value: "Complete 3D CAD assembly, detailed technical drawings, exploded views, and high-quality rendered visualizations." },
+  ]
+},
 ];
