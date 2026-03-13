@@ -16,10 +16,13 @@ export default function HomePage() {
         <p className="text-xs tracking-[0.22em] uppercase text-zinc-500 mb-4">
           PORTFOLIO / EDITORIAL
         </p>
-
+    <section className="mt-16">
+      
+    </section>
+    
         {/* BAŞLIK VE BUTONLARI AYNI SATIRA ALAN FLEX BOX */}
-        <div className="flex flex-wrap items-baseline gap-x-24 gap-y-6">
-          <h1 className="text-5xl md:text-5xl leading-none font-semibold tracking-tighter">
+        <div className="flex items-center justify-center py-1">
+          <h1 className="text-4xl md:text-4xl font-serif italic text-zinc-200 tracking-tight">
             gunesdesign
           </h1>
 
@@ -122,5 +125,7 @@ export default function HomePage() {
         </section>
       </Container>
     </main>
+    
   );
+
 }
