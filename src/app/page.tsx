@@ -21,8 +21,8 @@ export default function HomePage() {
     </section>
     
         {/* BAŞLIK VE BUTONLARI AYNI SATIRA ALAN FLEX BOX */}
-        <div className="flex items-center justify-center py-1">
-          <h1 className="text-4xl md:text-4xl font-serif italic text-zinc-200 tracking-tight">
+        <div className="absolute left-1/2 -translate-x-1/2">
+  <h1 className="text-3xl font-serif italic text-zinc-200">
             gunesdesign
           </h1>
 
