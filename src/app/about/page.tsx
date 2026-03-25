@@ -19,14 +19,23 @@ export default function AboutPage() {
         integrate structural design, system thinking and real-world
         problem solving.
       </p>
-
+<div className="mt-10">
+  <a
+    href="https://www.linkedin.com/in/erkin-gunes-dincer-851b99210"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center rounded-xl border border-zinc-300 px-4 py-2 text-sm text-white hover:bg-zinc-800 transition"
+  >
+    LinkedIn Profile →
+  </a>
+</div>
       <div className="mt-10">
         <a
           href="/files/erkin-dincer-cv.pdf"
           download
-          className="btn-download"
+          className="inline-flex items-center rounded-xl border border-zinc-300 px-4 py-2 text-sm text-white hover:bg-zinc-800 transition"
         >
-          Download CV (PDF)
+          Download CV (PDF) →
         </a>
       </div>
 
