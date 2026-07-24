@@ -4,16 +4,66 @@ import Gallery from "@/components/Gallery";
 import { designs } from "@/content/designs";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 
-// Next.js 15+ için params bir Promise olarak gelir, bu yüzden async kullanıyoruz.
-export default async function DesignPage({ params }: { params: Promise<{ slug: string }> }) {
-  // 1. Params'ı asenkron olarak çözüyoruz
+type DesignPageProps = {
+  params: Promise<{
+    slug: string;
+  }>;
+};
+
+export async function generateMetadata({
+  params,
+}: DesignPageProps): Promise<Metadata> {
   const { slug } = await params;
 
-  // 2. Veriyi slug üzerinden buluyoruz
+  const design = designs.find((item) => item.slug === slug);
+
+  if (!design) {
+    return {
+      title: "Design Not Found",
+      robots: {
+        index: false,
+        follow: false,
+      },
+    };
+  }
+
+  const description =
+    design.subtitle ||
+    `${design.title} — an engineering and product design project by Gunes Design.`;
+
+  return {
+    title: design.title,
+    description,
+
+    alternates: {
+      canonical: `/designs/${design.slug}`,
+    },
+
+    openGraph: {
+      title: `${design.title} | Gunes Design`,
+      description,
+      type: "article",
+      url: `/designs/${design.slug}`,
+      siteName: "Gunes Design",
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title: `${design.title} | Gunes Design`,
+      description,
+    },
+  };
+}
+
+export default async function DesignPage({
+  params,
+}: DesignPageProps) {
+  const { slug } = await params;
+
   const design = designs.find((d) => d.slug === slug);
 
-  // 3. Tasarım bulunamazsa 404 sayfasına yönlendiriyoruz
   if (!design) return notFound();
 
   return (

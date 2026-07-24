@@ -8,51 +8,34 @@ export default function HomePage() {
   return (
     <main>
       <Container>
- {/* HERO */}
-<section className="pt-10 pb-6">
+
+{/* HERO */}
+<section className="pt-16 pb-20">
   <Reveal>
-    <div className="grid grid-cols-12 gap-6 items-end">
-      <div className="col-span-12 md:col-span-7">
-        <p className="text-xs tracking-[0.22em] uppercase text-zinc-500 mb-4">
-          PORTFOLIO / EDITORIAL
+    <div className="flex justify-center">
+      <div className="w-full max-w-3xl text-center">
+        <p className="text-xs tracking-[0.22em] uppercase text-zinc-500">
+          Portfolio / Editorial
         </p>
-    <section className="mt-16">
-      
-    </section>
-    
-        {/* BAŞLIK VE BUTONLARI AYNI SATIRA ALAN FLEX BOX */}
-        <div className="absolute left-1/2 -translate-x-1/2">
-  <h1 className="text-3xl font-serif italic text-zinc-200">
-            gunesdesign
+
+        <div className="mt-12">
+          <h1 className="font-serif text-5xl md:text-7xl font-medium tracking-tight text-zinc-100">
+            Gunes Design
           </h1>
 
-          <div className="flex items-center gap-4">
-            <a
-              href=""
-              className="flex items-center justify--zinc-300 px-5 py-2 text-sm hover:bg-zinc-50 transition font-medium"
-            >
-              {/*View designs*/}
-            </a>
+          <p className="mt-5 mx-auto max-w-2xl text-base md:text-lg leading-relaxed text-zinc-400">
+            Engineering and product design portfolio by Erkin Gunes Dincer.
+          </p>
 
-            <a
-              href="#contact"
-              className="text-sm text-zinc-600 hover:text-zinc-900 transition font-medium border-b border-transparent hover:border-zinc-400"
-            >
-             {/* Contact*/}
-            </a>
-          </div>
+          <p className="mt-3 mx-auto max-w-2xl text-sm md:text-base leading-relaxed text-zinc-500">
+            Exploring product development, CAD modelling, sustainable engineering,
+            visual design and digital systems.
+          </p>
         </div>
-
-        <p className="mt-0 text-base md:text-lg text-zinc-600 max-w-xl">
-          {/* Intro metnini buraya ekleyebilirsin */}
-        </p>
       </div>
-
-      <div className="col-span-12 md:col-span-5" />
     </div>
   </Reveal>
 </section>
-
 
 {/* DESIGNS GRID */}
 <section id="designs" className="py-12">
