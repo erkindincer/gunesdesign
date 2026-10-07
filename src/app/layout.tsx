@@ -11,7 +11,7 @@ const inter = Inter({
 
 const serif = Fraunces({
   subsets: ["latin"],
-  variable: "--font-serif",
+  variable: "--font-fraunces",
   display: "swap",
 });
 

@@ -1,10 +1,18 @@
+import { projectNarratives } from "./project-narratives";
+import { modelDesigns } from "./model-designs";
+
 export type Design = {
   title: string;
   slug: string;
   cover: string;
   category: string;
-  year: string;
+  year?: string;
   subtitle?: string;
+  overview?: string;
+  challenge?: string;
+  approach?: string;
+  outcome?: string;
+  tools?: string[];
   gallery: { src: string; caption: string }[];
   specs: { label: string; value: string }[];
 };
@@ -89,7 +97,7 @@ export const designs: Design[] = [
     { src: "/designs/robot_projectt/16.png", caption: "Figure 06" },
     { src: "/designs/robot_projectt/17.png", caption: "Figure 07" },
     { src: "/designs/robot_projectt/18.jpg", caption: "Figure 08" },
-    { src: "/designs/robot_projectt/19.jpg", caption: "Figure 09" },
+    { src: "/designs/robot_projectt/19.JPG", caption: "Figure 09" },
     { src: "/designs/robot_projectt/01.jpg", caption: "Figure 10" },
     { src: "/designs/robot_projectt/02.jpg", caption: "Figure 11" },
     { src: "/designs/robot_projectt/03.jpg", caption: "Figure 12" },
@@ -112,34 +120,6 @@ export const designs: Design[] = [
   ]
 },
   {
-    title: "Pen",
-    slug: "pen_design",
-    category: "Regular Things",
-    year: "2023",
-    subtitle: "Regular item design",
-    cover: "/designs/pen_design/cover.png",
-    gallery: [
-      { src: "/designs/pen_design/02.png", caption: "" },
-      { src: "/designs/pen_design/cover.png", caption: "" },
-    ],
-    specs: [
-    ],
-  },
-  {
-    title: "Couch Design",
-    slug: "couch_design",
-    category: "Regular Things",
-    year: "2023",
-    subtitle: "Regular item design",
-    cover: "/designs/couch_design/cover.png",
-    gallery: [
-      { src: "/designs/couch_design/02.png", caption: "" },
-      { src: "/designs/couch_design/cover.png", caption: "" },
-    ],
-    specs: [
-    ],
-  },
-  {
   slug: "shop_project",
   title: "Shop Shelves Project",
   cover: "/designs/shop_project/cover.png",
@@ -161,4 +141,5 @@ export const designs: Design[] = [
     { label: "Deliverables", value: "Complete 3D CAD assembly, detailed technical drawings, exploded views, and high-quality rendered visualizations." },
   ]
 },
-];
+  ...modelDesigns,
+].map((design) => ({ ...design, ...projectNarratives[design.slug] }));
